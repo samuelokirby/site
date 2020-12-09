@@ -1,0 +1,26 @@
+        <Grid item sm={8}>
+          <Card ref={ref} className={style.content} elevation={0}>
+              {/* <img src={props.image} style={{height: 100, float: 'right', paddingRight: 100, filter: 'saturation(300%)'}}/> */}
+
+              <Typography variant="h5" style={{fontWeight: 500, width: 400}}>
+                {props.title}
+              </Typography> 
+              
+              <Typography style={{fontSize: 18, width: 400}}>
+                {props.setting}
+              </Typography>
+              
+              <Typography style={{fontSize: 18, width: 400}}>
+                {props.date}
+              </Typography>
+
+              <Typography style={{overflow: 'hidden', paddingBottom: 50, paddingTop: 50, width: '50%', fontSize: 18}}>
+                {props.description}
+              </Typography>
+
+          </Card>
+        </Grid>
+
+        <Grid item sm={1}>
+          <img src={props.image} style={{maxWidth: 375, paddingLeft: 30}}/>
+        </Grid>

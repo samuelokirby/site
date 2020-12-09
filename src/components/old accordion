@@ -1,0 +1,39 @@
+    <div className={style.wrapper}>
+
+      <animated.div className={style.accordion} style={expand}>
+        <div>
+          <Card ref={ref} className={style.content} elevation={0}>
+          <img src={props.image} style={{height: 100, float: 'right', paddingRight: 100, filter: 'saturation(300%)'}}/>
+
+            <Typography variant="h5" style={{fontWeight: 500}}>
+              {props.title}
+            </Typography>
+            <Typography style={{fontSize: 18}}>
+              {props.setting}
+            </Typography>
+            
+            <Typography style={{fontSize: 18}}>
+              {props.date}
+            </Typography>
+
+            <Typography style={{overflow: 'hidden', paddingBottom: 50, paddingTop: 50, width: '50%', fontSize: 18}}>
+              {props.description}
+            </Typography>
+          </Card>
+        </div>
+        
+      </animated.div>
+      
+
+      <div style={{width: '52.1%'}}>
+        <animated.button
+          className={style.expand}
+          onClick={() => toggle(!open)}
+          style={spin}  >
+          <img src={DoubleChevron}/>
+        </animated.button>
+      </div>
+
+
+
+    </div>
