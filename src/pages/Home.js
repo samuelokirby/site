@@ -76,7 +76,8 @@ function Home(){
   var baseUrl = "https://api.api.ai/v1/";
   var accessToken = "d40a2e1786324a019851c794082aaaa1";
 
-  const [history, updateHistory] = useState(['Sam-Bot: Welcome to my page! I am Sam-Bot, a chat bot designed by Sam to answer questions.']);
+  const [history, updateHistory] = useState(['Sam-Bot: Welcome to my page! I am Sam-Bot, a chat bot designed by Sam to answer questions.',
+  'Sam-Bot: Ask me questions related to Sam\'s professional experience']);
   const [input, setInput] = useState("");
   const [load, setLoad] = useState(false);
 
@@ -91,6 +92,14 @@ function Home(){
     fontSize: 48,
     opacity: load ? 1 : 0,
     fontWeight: load ? 300 : 500,
+  });
+
+  const fadeIn = useSpring({
+    fontSize: 48,
+    fontFamily: 'Montserrat',
+    fontWeight: 500,
+    opacity: 1, from: {opacity: 0},
+    // transform: "rotate(2deg)", from: {transform: "rotate(5deg)"}
   });
   
 
@@ -132,7 +141,9 @@ function Home(){
   const classes = useStyles();
   return(
 
+    <animated.div style={fadeIn}>
 
+    
     <Container maxWidth="lg" style={{marginTop: 125, marginBottom: 400}}>
 
 
@@ -146,26 +157,25 @@ function Home(){
 
     <div style={{textAlign: 'center'}}>
 
-        <animated.span variant="h3" style={introAnimation}>
+        <animated.span variant="h3" style={fadeIn}>
           Sam Bot
         </animated.span>
 
         
-
         <ChatBody>
           {history.map(function(item){
             console.log(item.substring(0, 9));
             if(item.substring(0, 9) === 'Sam-Bot: '){
               // if Sam-Bot is sending the message
               return(
-                <div className={classes.leftMessage}>
+                <div className={classes.leftMessage} style={fadeIn}>
                   {item.substring(9, item.length)}
                 </div>
               )
             }
             else{
               return(
-                <div className={classes.rightMessage}>
+                <div className={classes.rightMessage} style={fadeIn}>
                   {item}
                 </div>
               )
@@ -200,6 +210,8 @@ function Home(){
 
 
     </Container>
+
+    </animated.div>
 
   )
 }

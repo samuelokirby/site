@@ -46,19 +46,27 @@ function SocialSquare(props){
 
   const [isHovered, setHover] = React.useState(false);
 
+  const [time, setTime] = React.useState(Date.now() % 2);
+
   let onHover = () => {
     setHover(!isHovered)
-    console.log("hovering: " + isHovered);
+    console.log("Time: " + time);
+    setTime(Date.now() % 2);
   }
 
   const classes = useStyles();
+
+  useStyles(() => {
+    console.log('update');
+  });
 
 
   const grow = useSpring({
     config: { friction: 20, tension: 500, mass: 1 },
     height: isHovered ? 250 : 250,
     width: isHovered ? 250 : 250,
-    transform: isHovered ? "rotate(3deg)" : "rotate(0deg)",
+    // transform: isHovered ? "rotate(3deg)" : "rotate(0deg)",
+    transform: isHovered ? time === 1 ? "rotate(3deg)" : "rotate(-3deg)" : "rotate(0deg)",
     backgroundColor: isHovered ? hoverColor : initialColor,
   });
 
