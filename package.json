@@ -3,12 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.1.2",
     "@testing-library/user-event": "^12.2.2",
+    "jquery": "^3.5.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
+    "react-jam-icons": "^1.0.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
+    "react-scroll-to-bottom": "^4.0.0",
+    "react-spring": "^8.0.27",
+    "react-stay-scrolled": "^7.1.0",
+    "react-use": "^15.3.4",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
