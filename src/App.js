@@ -9,6 +9,7 @@ import Blog from './pages/Blog';
 import Projects from './pages/Projects';
 import GoT from './pages/GoT';
 import Home from './pages/Home';
+import { Helmet } from 'react-helmet';
 
 
 class App extends Component{
@@ -17,6 +18,9 @@ class App extends Component{
     render(){
         return(
             <div>
+                <Helmet>
+                    <title>Sam Kirby</title>
+                </Helmet>
                 <BrowserRouter>
                 <NavBar/>
                     <Switch>
