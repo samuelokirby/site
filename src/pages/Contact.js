@@ -90,6 +90,7 @@ function Contact(){
         </SocialSquare>
       </a>
 
+  
       <a href="https://www.linkedin.com/in/samuelokirby" target="_blank">
         <SocialSquare title={"LinkedIn"}>
           <div style={{marginBottom: 20}}>

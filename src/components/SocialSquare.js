@@ -56,8 +56,8 @@ function SocialSquare(props){
 
   const grow = useSpring({
     config: { friction: 20, tension: 500, mass: 1 },
-    height: isHovered ? 250 : 245,
-    width: isHovered ? 250 : 245,
+    height: isHovered ? 250 : 250,
+    width: isHovered ? 250 : 250,
     transform: isHovered ? "rotate(3deg)" : "rotate(0deg)",
     backgroundColor: isHovered ? hoverColor : initialColor,
   });

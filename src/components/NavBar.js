@@ -17,7 +17,7 @@ import MenuIcon from '../icons/MenuIcon.svg';
 const useStyles = makeStyles((theme) => ({
   button: {
     '&:hover': {
-        backgroundColor: '#fff',
+        backgroundColor: theme.palette.primary.secondary,
     },
     height: 40,
     marginRight: 5,

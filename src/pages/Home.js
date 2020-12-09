@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Typography, Button, Container, makeStyles, Input } from '@material-ui/core';
+import { Button, Container, makeStyles, Input } from '@material-ui/core';
 import { Helmet } from 'react-helmet';
 import $ from 'jquery';
 import ChatBody from '../components/ChatBody';
@@ -83,7 +83,6 @@ function Home(){
 
   useEffect(() => {
     setLoad(true);
-    console.log(load);
   });
 
 
@@ -190,7 +189,7 @@ function Home(){
       value={input}
       
       />
-      <Button>
+      <Button onClick={() => send(input)}>
         Send
       </Button>
 
